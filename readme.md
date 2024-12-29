@@ -12,3 +12,6 @@ DATABASE_URL=postgres://postgres:password@localhost:5432/socialnetwork npm run m
 
 # Node API Method and Goal
 ![alt text](image/image.png)
+
+# Postman testing
+https://localhost:3005/users
