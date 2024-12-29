@@ -10,4 +10,5 @@ npm run migrate create add users table
 # Windows with Git Bash
 DATABASE_URL=postgres://postgres:password@localhost:5432/socialnetwork npm run migrate up
 
-![Node API](image/image.png)
+# Node API Method and Goal
+![alt text](image/image.png)
