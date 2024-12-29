@@ -33,3 +33,16 @@ make file name request.http
 ```bash
 http://localhost:3005/users
 ```
+
+# Insert data to database
+Insert data
+```bash
+INSERT INTO users (bio, username)
+VALUES
+	('This is my bio', 'Ansel22'),
+	('THis is about me!','Lino11');
+```
+Check Data
+```bash
+SELECT * FROM users;
+```
