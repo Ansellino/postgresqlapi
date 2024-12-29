@@ -4,7 +4,8 @@
   "description": "npm init -y",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "node-pg-migrate",
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
