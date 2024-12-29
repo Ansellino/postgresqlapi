@@ -1,0 +1,10 @@
+import type { MigrationOptions } from '../../types';
+import type { FunctionOptions } from '../functions';
+import type { Name, Reversible, Value } from '../generalTypes';
+import type { DropTriggerOptions } from './dropTrigger';
+import type { TriggerOptions } from './shared';
+export type CreateTriggerFn1 = (tableName: Name, triggerName: string, triggerOptions: TriggerOptions & DropTriggerOptions) => string;
+export type CreateTriggerFn2 = (tableName: Name, triggerName: string, triggerOptions: TriggerOptions & FunctionOptions & DropTriggerOptions, definition: Value) => string;
+export type CreateTriggerFn = CreateTriggerFn1 | CreateTriggerFn2;
+export type CreateTrigger = Reversible<CreateTriggerFn>;
+export declare function createTrigger(mOptions: MigrationOptions): CreateTrigger;

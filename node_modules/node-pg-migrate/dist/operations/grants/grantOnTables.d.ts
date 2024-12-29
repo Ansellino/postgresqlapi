@@ -1,0 +1,10 @@
+import type { MigrationOptions } from '../../types';
+import type { Reversible } from '../generalTypes';
+import type { RevokeOnTablesOptions } from './revokeOnTables';
+import type { AllTablesOptions, CommonGrantOnTablesOptions, RevokeOnObjectsOptions, SomeTablesOptions } from './shared';
+export type GrantOnSomeTablesOptions = CommonGrantOnTablesOptions & SomeTablesOptions;
+export type GrantOnAllTablesOptions = CommonGrantOnTablesOptions & AllTablesOptions;
+export type GrantOnTablesOptions = (GrantOnSomeTablesOptions | GrantOnAllTablesOptions) & RevokeOnObjectsOptions;
+export type GrantOnTablesFn = (grantOptions: GrantOnTablesOptions & RevokeOnTablesOptions) => string;
+export type GrantOnTables = Reversible<GrantOnTablesFn>;
+export declare function grantOnTables(mOptions: MigrationOptions): GrantOnTables;
