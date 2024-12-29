@@ -14,4 +14,7 @@ DATABASE_URL=postgres://postgres:password@localhost:5432/socialnetwork npm run m
 ![alt text](image/image.png)
 
 # Postman testing
+```bash
 https://localhost:3005/users
+
+```
