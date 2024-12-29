@@ -13,7 +13,17 @@ router.get('/users', async (req, res) => {
     res.send(users);
 });
 
-router.get('/users/:id', async (req, res) => {});
+router.get('/users/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const user = await UserRepo.findById(id);
+
+    if(user) {
+        res.send(user);
+    }else{
+        res.sendStatus(404);
+    }
+});
 
 router.post('/users', async (req, res) => {});
 

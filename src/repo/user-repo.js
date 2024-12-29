@@ -8,7 +8,25 @@ class UserRepo {
         return toCamelCase(rows);
     }
 
-    static async findById() {}
+    static async findById(id) {
+        /* WARNING: REALLY BIG SECURITY ISSUE! Sql ijection if using this!
+        const { rows } = await pool.query(`
+           SELECT * FROM users WHERE id = ${id};
+        `  limit 1);
+        */
+
+        /*
+        const { rows } = await pool.query(`
+            SELECT * FROM users WHERE id = $1 AND USERNAME = $2;
+        `, [id, username]);
+        */
+        
+        const { rows } = await pool.query(`
+            SELECT * FROM users WHERE id = $1;
+        `, [id]);
+
+        return toCamelCase(rows)[0]; //return row 1
+    }
 
     static async insert() {}
 
