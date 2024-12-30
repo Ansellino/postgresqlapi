@@ -54,4 +54,10 @@ CREATE SCHEMA test;
 # Path
 ```bash
 SHOW search_path;
+SET search_path TO test, public;
+```
+
+# Full documentation
+```bash
+https://node-postgres.com/
 ```
