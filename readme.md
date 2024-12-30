@@ -46,3 +46,12 @@ Check Data
 ```bash
 SELECT * FROM users;
 ```
+
+# Create Schema
+```bash
+CREATE SCHEMA test;
+```
+# Path
+```bash
+SHOW search_path;
+```
